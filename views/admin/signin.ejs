@@ -7,7 +7,7 @@
 <body>
 <%- include('../includes/navbar.ejs') -%>
 <%- include('../includes/footer.ejs') -%>
-<form class="row g-3" method="POST" action="/admin/login">
+<form class="row g-3" method="POST" action="/admin/signin">
   <div class="col-10">
     <label class="form-label">İsim</label>
     <input type="text" name="isim" class="form-control" placeholder="İsminizi Giriniz">
@@ -20,8 +20,13 @@
     <label class="form-label">Password</label>
     <input type="password" class="form-control" name="pass" placeholder="Şifrenizi Giriniz">
   </div>
+  <div class="col-10">
+    <label class="form-label">Verification Code</label>
+    <input type="password" class="form-control" name="verificationcode" placeholder="Doğrulama Kodunuz">
+  </div>
+
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

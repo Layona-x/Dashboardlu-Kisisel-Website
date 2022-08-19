@@ -159,6 +159,8 @@ app.get('/admin/blogs-ekle',async function(req,res){
  })
 
 app.post('/admin/blogs-ekle',upload.single("uploaded_file"),async function(req,res){
+User.findById(req.cookies.id).then((userResult)=>{
+if(userResult.admin == true){
   var blog = new Blogs({
     title:req.body.title,
     photo:req.file.filename,
@@ -166,6 +168,10 @@ app.post('/admin/blogs-ekle',upload.single("uploaded_file"),async function(req,r
 }) 
   blog.save().then((resend)=>{
     res.redirect('/admin/blogs-ekle')              
+})
+} else {
+ res.redirect('/')
+}
 })
 })
 

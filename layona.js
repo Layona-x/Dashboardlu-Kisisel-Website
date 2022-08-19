@@ -16,7 +16,7 @@ app.use(bodyParser.json()).use(
 );
 const dbURL = process.env.db;
 mongoose
-  .connect("mongodb+srv://anya:orhan2357@cluster0.1p07r.mongodb.net/anyadev?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
     app.listen(port, () => {
       console.log("mongoDB Bağlantı kuruldu");

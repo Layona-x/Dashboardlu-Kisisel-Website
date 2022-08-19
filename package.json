@@ -2,9 +2,9 @@
   "name": "glitch-hello-node",
   "version": "0.1.0",
   "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
-  "main": "server.js",
+  "main": "layona.js",
   "scripts": {
-    "start": "node pokedex.js"
+    "start": "node layona.js"
   },
   "dependencies": {
     "express": "^4.18.1",
